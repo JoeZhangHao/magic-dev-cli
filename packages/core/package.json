@@ -1,6 +1,6 @@
 {
   "name": "@magic-cli-dev/core",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "magic-cli-dev core",
   "author": "joehaozhang <joehaozhang@tencent.com>",
   "homepage": "",
@@ -17,6 +17,6 @@
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "dependencies": {
-    "@magic-cli-dev/utils": "^0.0.0"
+    "@magic-cli-dev/utils": "^0.0.1"
   }
 }
