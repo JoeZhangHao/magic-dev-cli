@@ -1,0 +1,22 @@
+{
+  "name": "@magic-cli-dev/core",
+  "version": "0.0.0",
+  "description": "magic-cli-dev core",
+  "author": "joehaozhang <joehaozhang@tencent.com>",
+  "homepage": "",
+  "license": "ISC",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "dependencies": {
+    "@magic-cli-dev/utils": "^0.0.0"
+  }
+}
