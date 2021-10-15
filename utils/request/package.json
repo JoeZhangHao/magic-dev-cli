@@ -1,7 +1,7 @@
 {
-  "name": "@magic-cli-dev/init",
-  "version": "1.0.0",
-  "description": "> TODO: description",
+  "name": "@magic-cli-dev/request",
+  "version": "0.0.4",
+  "description": "magic-cli-dev axios",
   "author": "joehaozhang <joehaozhang@tencent.com>",
   "homepage": "https://github.com/JoeZhangHao/magic-dev-cli#readme",
   "license": "ISC",
@@ -27,8 +27,6 @@
     "url": "https://github.com/JoeZhangHao/magic-dev-cli/issues"
   },
   "dependencies": {
-    "@magic-cli-dev/command": "file:../../models/command",
-    "@magic-cli-dev/log": "file:../../utils/log",
-    "@magic-cli-dev/request": "file:../../utils/request"
+    "axios": "^0.23.0"
   }
 }

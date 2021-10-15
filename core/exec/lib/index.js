@@ -67,7 +67,6 @@ async function exec() {
 			// 1. require(rootFile).call(null, Array.from(arguments));
 
 			// 改造为在 node 子进程中使用
-			console.log('arguments: ', arguments);
 			const args = Array.from(arguments);
 			const cmd = args[args.length - 1];
 			const o = Object.create(null);
