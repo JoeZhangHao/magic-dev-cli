@@ -1,9 +1,10 @@
 'use strict';
 
-const cp = require('child_process');
 const path = require('path');
+
 const Package = require('@magic-cli-dev/package');
 const log = require('@magic-cli-dev/log');
+const { exec: spawn } = require('@magic-cli-dev/utils');
 
 const SETTINGS = {
 	init: '@imooc-cli/init'
@@ -58,7 +59,6 @@ async function exec() {
 	}
 
 	const rootFile = pkg.getRootFilePath();
-	console.log('rootFile: ', rootFile);
 	// 类似执行 lib/index.js
 	// 将 arguments 拍平，作为参数传入
 	if (rootFile) {
@@ -96,16 +96,6 @@ async function exec() {
 		}
 
 	}
-}
-
-// 兼容 window 环境和 mac 环境
-function spawn(command, args, options) {
-	const win32 = process.platform === 'win32';
-
-	const cmd = win32 ? 'cmd' : command;
-	const cmdArgs = win32 ? ['/c'].concat(command, args) : args;
-
-	return cp.spawn(cmd, cmdArgs, options || {});
 }
 
 module.exports = exec;

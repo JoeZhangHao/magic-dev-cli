@@ -110,11 +110,12 @@ async function checkGlobalUpdate() {
 
 function checkEnv() {
 	const dotenv = require('dotenv')
-	const dotenvPath = path.resolve(userHome, 'env')
+	const dotenvPath = path.resolve(userHome, '.env')
 	if (pathExists(dotenvPath)) {
 		dotenv.config({
 			path: dotenvPath
 		})
+		log.verbose('process.env: ', process.env);
 	}
 	createDefaultConfig();
 }

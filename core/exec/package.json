@@ -28,6 +28,7 @@
   },
   "dependencies": {
     "@magic-cli-dev/package": "file:../../models/package",
-    "@magic-cli-dev/log": "file:../../utils/log"
+    "@magic-cli-dev/log": "file:../../utils/log",
+    "@magic-cli-dev/utils": "file:../../utils/utils"
   }
 }

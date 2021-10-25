@@ -6,6 +6,7 @@ const pkgDir = require('pkg-dir').sync;
 const npminstall = require('npminstall');
 const pathExists = require('path-exists').sync;
 
+const log = require('@magic-cli-dev/log');
 const { isObject } = require('@magic-cli-dev/utils');
 const formatPath = require('@magic-cli-dev/format-path');
 const {
@@ -22,6 +23,8 @@ class Packgae {
     if (!isObject(options)) {
       throw new Error('Package 类的 options 参数必须为对象')
     }
+
+    log.verbose('Packgae options: ', options);
 
     // package 的目标路径
     this.targetPath = options.targetPath;
@@ -107,9 +110,9 @@ class Packgae {
           version: latestPackageVersion,
         }]
       })
-
-      this.packageVersion = latestPackageVersion;
     }
+    // 下载完最新版本后更新版本号
+    this.packageVersion = latestPackageVersion;
   }
 
   // 获取入口文件的路径
